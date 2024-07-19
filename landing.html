@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Raleway:wght@400;700&family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="background3.js"></script>
+    <script src="changeFont2.js"></script>
+    <script src="changeContent.js"></script>
+    <script src="buttons.js"></script>
+</head>
+<body>
+    <div id="body-elements">
+        <div id="contact-links">
+            <a href="#"><img src="images/github.png" alt="github" id="github"></a>
+            <a href="#"><img src="images/linkedin.png" alt="linkedin" id="linkedin"></a>
+            <a href="#"><img src="images/email.png" alt="gmail" id="gmail"></a>
+            <a href="#"><img src="images/phone.png" alt="phone" id="phone"></a>
+        </div>
+
+        <div class="title-container">
+            <span id="title-text"></span>
+            <span class="cursor">|</span>
+        </div>
+        
+        <div id="navigation">
+            <button id="about-me" class="inactive">About Me</button>
+            <button id="CV" class="inactive">CV</button>
+            <button id="Files" class="inactive">Files</button>
+        </div>
+
+        <div id="content" class="container"></div>
+    </div>
+    <main>
+        <canvas id="background"></canvas>
+    </main>
+</body>
+</html>

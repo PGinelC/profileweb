@@ -1,0 +1,105 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#body-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.container {
+    display: flex;
+    width: 50px;
+    background-color: white;
+    box-shadow: 3px 3px 30px #ccc;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+#contact-links img {
+    height: 40px;
+    width: 40px;
+}
+
+
+.title-container {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 4em;
+    margin-top: 50px;
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+
+#navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 0 20px;
+    width: 70%;
+}
+
+
+#navigation button {
+    padding: 10px 40px;
+    margin: 10px 30px 10px 30px;
+    font-size: 16px;
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+    box-shadow: 1px 1px 25px #ccc;
+}
+
+.about-me {
+    background-color: #4D96FF;
+}
+
+#content {
+    margin-top: 20px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+}
