@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    initParticles();
+    animate();
   });
 
   class Particle {

@@ -25,7 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
     "Nunito, sans-serif",
     "Cabin, sans-serif",
   ];
-  const titles = ["Pedro Ginel Camacho"];
+  const messages = [
+    "Hello there",
+    "How are you?",
+    "Good?",
+    "I hope you are good",
+    "I'm doing well",
+    "Oh, I forgot",
+    "My name is",
+    "Pedro Ginel Camacho",
+  ];
 
   function getRandomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
@@ -65,15 +74,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function startAnimation() {
-    while (true) {
-      const title = getRandomElement(titles);
+    for (const message of messages) {
       const font = getRandomElement(fonts);
 
       await deleteEffect();
-      await typeEffect(title, font);
+      await typeEffect(message, font);
 
       await new Promise((resolve) =>
-        setTimeout(resolve, Math.random() * 5000 + 5000)
+        setTimeout(resolve, Math.random() * 2000 + 3000)
       );
     }
   }

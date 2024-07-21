@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contentDiv = document.getElementById("content");
 
-  const aboutMeContent = `
-        <h2>About Me</h2>
-        <p>Should have a gif of me, a bio and a timeline.</p>
-    `;
-
-  const cvContent = `
-        <h2>CV</h2>
-        <p>This should just redirect to the pdf file of my latest cv</p>
-    `;
-
-  const filesContent = `
-        <h2>Files</h2>
-        <p>This should have all of my certifications and like, the documents validating them.</p>
-    `;
+  async function loadContent(url) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const content = await response.text();
+      contentDiv.innerHTML = content;
+    } catch (error) {
+      console.error("Could not load the content:", error);
+      contentDiv.innerHTML =
+        "<p>Sorry, there was an error loading the content.</p>";
+    }
+  }
 
   const buttons = document.querySelectorAll("#navigation button");
   buttons.forEach((button) => {
@@ -24,18 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       switch (button.id) {
         case "about-me":
-          contentDiv.innerHTML = aboutMeContent;
+          loadContent("about-me.html");
           break;
         case "CV":
-          contentDiv.innerHTML = cvContent;
+          loadContent("cv.html");
           break;
         case "Files":
-          contentDiv.innerHTML = filesContent;
+          loadContent("files.html");
           break;
       }
     });
   });
 
   // Initialize with the About Me content
-  contentDiv.innerHTML = aboutMeContent;
+  loadContent("about-me.html");
 });
