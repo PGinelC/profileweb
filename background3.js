@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ctx = canvas.getContext("2d");
 
   let particles = [];
-  const colors = ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF", "#FFD93D"];
+  const colors = ["#00AF91", "#007965", "#F58634", "#FFCC29"];
   const maxParticles = 100;
   const maxDistance = 100;
 

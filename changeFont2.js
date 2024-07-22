@@ -27,11 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
   const messages = [
     "Hello there",
-    "How are you?",
-    "Good?",
-    "I hope you are good",
-    "I'm doing well",
-    "Oh, I forgot",
+    "Welcome to my website",
     "My name is",
     "Pedro Ginel Camacho",
   ];
@@ -80,9 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
       await deleteEffect();
       await typeEffect(message, font);
 
-      await new Promise((resolve) =>
-        setTimeout(resolve, Math.random() * 2000 + 3000)
-      );
+      await new Promise((resolve) => setTimeout(resolve, 1000));
     }
   }
   startAnimation();

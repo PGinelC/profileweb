@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to get a random color
   function getRandomColor() {
-    const colors = ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF", "#FFD93D"];
+    const colors = ["#00AF91", "#F58634", "#FFCC29"];
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
   }
