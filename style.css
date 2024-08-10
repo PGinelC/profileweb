@@ -4,10 +4,13 @@ body, html, main {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Lato, sans-serif;
 }
+
 canvas {
     position: fixed;
     top: 0;
@@ -24,6 +27,7 @@ canvas {
     flex-direction: column;
     align-items: center;
     width: 70%;
+    top: 500px;
 }
 
 .container {
@@ -121,13 +125,135 @@ canvas {
     box-shadow: 1px 1px 25px #ccc;
 }
 
-.about-me {
-    background-color: #4D96FF;
-}
-
 #content {
     margin-top: 20px;
     padding: 0 20px;
     width: 100%;
-    max-width: 1200px;
+    
+}
+
+
+
+/* For the changing content */
+/* About me */
+#content-container {
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}.about-me {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.about-me img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border: 1px solid #000;
+}
+
+.journey-content {
+    display: flex;
+    align-items: stretch;
+}
+.timeline-bar {
+    width: 20px;
+}
+.experience-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+.experience-text {
+    flex: 1;
+    padding-right: 40px;
+}
+.experience-image {
+    width: 50px;
+    height: 50px;
+    top: 0;
+    border-radius: 5px;
+}
+h2 {
+    padding: 5px;
+    margin: 0 0 10px 0;
+}
+
+/* CV */
+embed {
+    margin-top: 15px;
+    width: 100%;
+    height: 1000px;
+}
+
+/* Files */
+/*.files-container{
+}
+
+#file-container{
+    position: relative;
+}
+
+.download-button{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+}*/
+
+/* Container for all files */
+#files-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Individual file container */
+.file-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* File name style */
+.file-container a {
+    text-decoration: none;
+    color: #333;
+    flex-grow: 1;
+}
+
+/* Icons container */
+.icons-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for both icons */
+.icon {
+    margin-left: 20px;
+}
+
+/* Specific style for the download icon if needed */
+.download-button {
+    width: 15px;
+    height: 15px;
+}
+
+/* Specific style for the new icon if needed */
+.view-icon {
+    width: 25px;
+    height: 15px;
+}
+
+#View button{
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0px;
 }
