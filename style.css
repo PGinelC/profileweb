@@ -133,27 +133,59 @@ canvas {
 }
 
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 
 /* For the changing content */
-/* About me */
 #content-container {
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
     width: 100%;
-}.about-me {
+}
+
+/* About Me */
+.about-me {
+    flex-direction: column;
+    align-items: stretch;
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    margin-top: 10px;
     padding: 10px;
     width: 100%;
 }
-.about-me img {
-    width: 20%;
-    height: 20%;
-    margin-right: 20px;
+
+.about-me-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.about-me-header h2 {
+    font-size: 60px;
+    margin-top: 0;
+}
+
+.about-me-header img {
+    height: auto;
+    max-width: 400px;
+    width: 150px;
+    height: auto;
+    margin-right: 15px;
     border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.about-me-text {
+    flex: 1;
+}
+
+.about-me-text p {
+    margin-bottom: 10px;
 }
 
 /*Journey*/
@@ -214,46 +246,50 @@ embed {
     right: 5px;
 }*/
 
-/* Container for all files */
 #files-container {
     width: 100%;
     margin: 0 auto;
 }
 
-/* Individual file container */
 .file-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px;
     border-bottom: 1px solid #e0e0e0;
 }
 
-/* File name style */
+#last-file-container{
+    border-bottom: 0px;
+}
+
+.file-name {
+    flex: 1;
+    margin-right: 20px;
+    word-break: break-word;  
+}
+
 .file-container a {
     text-decoration: none;
     color: #333;
     flex-grow: 1;
 }
 
-/* Icons container */
 .icons-container {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
-/* Style for both icons */
 .icon {
     margin-left: 20px;
 }
 
-/* Specific style for the download icon if needed */
 .download-button {
     width: 15px;
     height: 15px;
 }
 
-/* Specific style for the new icon if needed */
 .view-icon {
     width: 25px;
     height: 15px;
@@ -264,4 +300,95 @@ embed {
     background: none;
     box-shadow: none;
     border-radius: 0px;
+}
+
+/* For Phones */
+@media screen and (max-width: 768px) {
+body {
+    font-size: 16px;
+    padding: 10px;
+}
+
+#title-text {
+    font-size: 30px;
+}
+
+.cursor{
+    font-size: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* Files */
+.container {
+    flex-direction: column;
+    align-items: center;
+}
+
+#navigation button {
+    padding: 10px 20px;
+    margin: 10px 10px 10px 10px;
+    font-size: 16px;
+}
+
+.icon {
+    margin-left: 10px;
+}
+
+#content-container {
+    padding: 10px 5px 10px 5px;
+}
+
+#content {
+    margin: 30px 0px 0px 0px;
+}
+
+.container {
+    margin: 30px 0px 0px 0px;
+}
+
+#body-elements {
+    width: 85%;
+}
+
+/* About Me */
+.about-me {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.about-me-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.about-me-header h2 {
+    font-size: 60px;
+    margin-top: 0;
+}
+
+.about-me-header img {
+    height: auto;
+    max-width: 150px;
+}
+
+.about-me-text {
+    flex: 1;
+}
+
+.about-me img {
+    width: 200px;
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+
+.about-me-header h2 {
+    margin-top: 0;
+}
+
 }
