@@ -392,3 +392,14 @@ img {
 }
 
 }
+
+@media screen and (max-width: 480px) {
+  .about-me-header h2{
+    font-size: 30px;
+  }
+
+  .about-me-header {
+    margin-bottom: 0px;
+    gap: 10px;
+  }
+}
